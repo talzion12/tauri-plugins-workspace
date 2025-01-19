@@ -276,10 +276,8 @@ impl UpdaterBuilder {
             on_before_exit: self.on_before_exit,
         })
     }
-}
 
-impl UpdaterBuilder {
-    pub(crate) fn current_exe_args<I, S>(mut self, args: I) -> Self
+    pub fn current_exe_args<I, S>(mut self, args: I) -> Self
     where
         I: IntoIterator<Item = S>,
         S: Into<OsString>,
